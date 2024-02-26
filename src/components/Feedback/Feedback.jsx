@@ -1,6 +1,6 @@
 import css from './Feedback.module.css';
 
-export default function Feedback ({clicks, totalClicks, percentOfPositive}) { 
+export default function Feedback ({clicks, totalClicks, persentOfPositive}) { 
     if (totalClicks === 0) { 
         return (
         <div className={css.feedback}>
@@ -9,11 +9,11 @@ export default function Feedback ({clicks, totalClicks, percentOfPositive}) {
     } else {
         return (
             <div>
-                <p>Good:{clicks.good}</p>
-                <p>Neutral:{clicks.neutral}</p>
-                <p>Bad:{clicks.bad}</p>
-                <p>Total:{totalClicks}</p>
-                <p>Positive:{percentOfPositive}</p>
+                <p>Good: {clicks.good}</p>
+                <p>Neutral: {clicks.neutral}</p>
+                <p>Bad: {clicks.bad}</p>
+                <p>Total: {totalClicks}</p>
+                <p>Positive: {persentOfPositive}%</p>
             </div>
         )
     }
